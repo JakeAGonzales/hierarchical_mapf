@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>Hierarchical Decision Framework for Multi-Agent Path Finding</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -65,7 +65,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block">University of Washington<br>Learning for Dynamics and Control 2025</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -81,17 +81,6 @@
                         <span>Paper</span>
                       </a>
                     </span>
-
-                    <!-- Supplementary PDF link -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -122,24 +111,6 @@
   </div>
 </section>
 
-
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
 <!-- Paper abstract -->
 <section class="section hero is-light">
   <div class="container is-max-desktop">
@@ -148,7 +119,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Multi-agent path finding (MAPF) is a well-studied problem in robotics that aims to find collision-free paths for multiple agents in a shared environment. While various solvers exist, they all struggle with scalability as the number of agents and size of the environment increases, primarily due to the problem's combinatorial nature and the lack of consideration for congestion effects caused by agent interactions. To address these limitations, we introduce a novel hierarchical decision-making framework that decomposes the environment and integrates global flow optimization with local path planning. The framework first decomposes the environment into subregions, allowing it to manage complexity by planning paths for agents within localized subproblems. At the global level, we formulate an abstracted routing game that models the high-level flow of agents between the subregions. This game is solved to compute an equilibrium flow distribution, which then produces high-level paths through the subregions guiding the local planning. Additionally, we develop a deep learning architecture to predict future spatiotemporal congestion effects within the regions. These congestion predictions are utilized in the local planning, where the framework employs MAPF algorithms to compute paths that avoid high-congestion areas. By integrating global flow optimization with localized, congestion-aware planning, the proposed framework is able to compute high-quality solutions for large-scale MAPF problems. Our experimental results demonstrate significant improvements over traditional MAPF solvers in terms of success rate and computational time on large-scale problems. This work advances the field of MAPF by introducing novel techniques to capture and leverage congestion dynamics in complex environments. 
           </p>
         </div>
       </div>
@@ -253,9 +224,6 @@
   </div>
 </section>
 <!-- End video carousel -->
-
-
-
 
 
 
